@@ -1,3 +1,4 @@
+require 'alias_method_chain'
 module ActiveRecord::Extensions::Delete#:nodoc:
   mattr_accessor :delete_batch_size
   self.delete_batch_size = 15000

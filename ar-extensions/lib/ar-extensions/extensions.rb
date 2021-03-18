@@ -1,5 +1,5 @@
 require 'forwardable'
-
+require 'alias_method_chain'
 # ActiveRecord::Extensions provides additional functionality to the ActiveRecord
 # ORM library created by DHH for Rails.
 #
@@ -424,7 +424,7 @@ module ActiveRecord::Extensions
   # ActiveRecord::Extension for implementing Regexp implementation for MySQL.
   # See documention for RegexpBase.
   class SqliteRegexp < RegexpBase
-    class_inheritable_accessor :connections
+    class_attribute :connections
     self.connections = []
     
     def self.add_rlike_function( connection )
