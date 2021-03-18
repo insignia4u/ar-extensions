@@ -16,4 +16,5 @@ Gem::Specification.new do |s|
   s.rdoc_options = ["--main", "README"]
   s.extra_rdoc_files = ["README"]
   s.add_dependency(%q<activerecord>, ["=6.1.2.1"])
+  s.add_dependency(%q<alias_method_chain>)
 end
